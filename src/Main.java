@@ -26,7 +26,7 @@ public class Main{
             if(scanner.hasNextInt()){
                 opt= scanner.nextInt();
             }else{
-                System.out.println("❌ Invalid input. Please enter a valid number.");
+                System.out.println(" Invalid input. Please enter a valid number.");
                 scanner.nextLine();
             }
 
@@ -97,12 +97,12 @@ public class Main{
                                 System.out.print("Insert product's name: ");
                                 productName = scanner.nextLine();
                                 stock[index][putNumber - 1] = productName;
-                                System.out.println("✅ Product inserted successfully");
+                                System.out.println(" Product inserted successfully");
                             } else {
-                                System.out.println("❌ That slot is already occupied.");
+                                System.out.println(" That slot is already occupied.");
                             }
                         } else {
-                            System.out.println("❌ Invalid category number.");
+                            System.out.println(" Invalid category number.");
                         }
                     } else {
                         System.out.println("Invalid stock number.");
@@ -139,12 +139,12 @@ public class Main{
                                 System.out.print("Input new name to update: ");
                                 String newName = scanner.nextLine();
                                 stock[index][j] = newName;
-                                System.out.println("✅ Product updated successfully.");
+                                System.out.println(" Product updated successfully.");
                                 break;
                             }
                         }
                     } else {
-                        System.out.println("❌ Invalid stock number.");
+                        System.out.println(" Invalid stock number.");
                     }
                     break;
                 }
@@ -165,5 +165,4 @@ public class Main{
             }
         }
     }
-//    System.out.print("Press to continue....");
 }
