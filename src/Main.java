@@ -115,7 +115,6 @@ public class Main{
                     for (int i = 1; i <= rows; i++) {
                         System.out.print(i + " | ");
                     }
-
                     System.out.print("\nInput stock number: ");
                     stockNumber = scanner.nextInt();
                     scanner.nextLine();
@@ -131,7 +130,6 @@ public class Main{
                                 System.out.print("[" + (j + 1) + " - " + stock[index][j] + " ] ");
                             }
                         }
-
                         System.out.print("\nInput old name to update: ");
                         String oldName = scanner.nextLine();
                         for (int j = 0; j < stock[index].length; j++) {
@@ -152,9 +150,11 @@ public class Main{
                     break;
                 }
                 case 6:{
+                    System.out.println(" # ========= Insert history ========= #");
                     break;
                 }
                 case 7:{
+                    System.out.println("# ======== Update history ======== #");
                     break;
                 }
                 case 8:{
