@@ -111,8 +111,14 @@ public class Main{
                 }
                 case 4: {
                     System.out.println("============= Update Products =============");
-                    System.out.print("[*] Available stock: ");
+                    System.out.print("[*] Available in stock: ");
+
                     for (int i = 1; i <= rows; i++) {
+                        for(int j= 1;j<=rows;j++){
+//                            if(stockNumber[i][j]=="empty"){
+//                                System.out.print(" ");
+//                            }
+                        }
                         System.out.print(i + " | ");
                     }
                     System.out.print("\nInput stock number: ");
@@ -147,6 +153,37 @@ public class Main{
                     break;
                 }
                 case 5:{
+                    System.out.println(" # ========= Delete history ========= #");
+                    System.out.print("[*] Available stock: ");
+                    for (int i = 1; i <= rows; i++) {
+                        System.out.print(i + " | ");
+                    }
+                    System.out.print("\nInput stock number: ");
+                    stockNumber = scanner.nextInt();
+                    scanner.nextLine();
+                    int index = stockNumber - 1;
+                    if(stockNumber>=1 && stockNumber<=stock.length){
+                        System.out.print("Stock[" + stockNumber + "] =>");
+                        for (int j = 0; j < stock[index].length; j++) {
+                            if (stock[index][j] == null) {
+                                System.out.print(" [" + (j + 1) + " - empty ] ");
+                            } else {
+                                System.out.print("[" + (j + 1) + " - " + stock[index][j] + " ] ");
+                            }
+                        }
+                        System.out.print("\nInput name to delete: ");
+                        String oldName = scanner.nextLine();
+                        for(int i =0;i<stock[index].length;i++){
+                            if(oldName.equals(stock[index][i])){
+                                stock[index][i] = "empty";
+                                System.out.println(" Product deleted successfully.");
+                                break;
+                            }
+                        }
+                    }
+                    else {
+                        System.out.println(" Invalid stock number.");
+                    }
                     break;
                 }
                 case 6:{
